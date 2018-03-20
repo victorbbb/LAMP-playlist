@@ -1,0 +1,951 @@
+@font-face {
+
+    font-family: "SF Display";
+    src: url(../fonts/sf-san-francisco-ui-display-thin-59f33a183fb29.otf);
+
+}
+
+body{
+
+  font-family: "SF Display";
+  background-color: #eaf2ef;    /*#212110*/
+
+}
+
+.topTaskBar {
+
+    height: 40px;
+    width: 100%;
+    background-color: #ff7b55;
+    position: fixed;
+    z-index: 997;
+    animation-name: taskbarRoll;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+
+}
+
+@keyframes taskbarRoll{
+
+    0%{height: 100%;}
+    70%{height: 100%;}
+    100%{height: 40px;}                    
+
+}
+
+
+.addPlay{
+
+  background-color: darkseagreen;
+  color: white;
+  height: 100%;
+  padding-top: 8px;
+  
+}
+
+
+.addPlay:hover{
+
+    background-color: white;
+    color: black;
+    cursor: pointer;
+
+}
+
+
+.addPlaylistSpan{
+    animation-name: fadeStart;
+    animation-duration: 4s;
+}
+
+
+@keyframes fadeStart{
+
+    0%{opacity: 0;}
+    60%{opacity: 0;}
+    1000%{opacity: 1;}
+
+}
+
+
+#searchDiv{
+    animation-name: fadeStart;
+    animation-duration: 4s;
+}
+
+
+.hellodiv {
+
+    z-index: 999;
+    position: absolute;
+    color: #eaf2ef;
+    font-size: 100px;
+    text-align: center;
+    font-family: "SF Display";
+    /*font-family: 'Bungee Shade', cursive;*/
+    top: 40%;
+    left: 40%;
+    animation-name: hello;
+    animation-duration: 10s;
+}
+
+
+.playListsContainerPlayerOn{
+
+    position: relative;
+    top: 300px;
+
+}
+
+
+.playlistDiv{
+
+    z-index: 900;
+    width: 230px;
+    height: 250px;
+    margin: 0 auto;
+    opacity: 0.25;
+    margin-top: 20px;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+    animation-name: appear;
+    animation-duration: 2s;
+}
+
+
+.playlistDiv:hover {
+
+    opacity: 1;
+
+}
+
+
+.playlistDivPlayerOn {
+
+    z-index: 900;
+    width: 240px;
+    height: 250px;
+    margin: 0 auto;
+    opacity: 0.25;
+    top: 230px;
+    animation-name: moveRecord;
+    animation-duration: 2s;
+
+}
+
+@keyframes moveRecord{
+
+    0%{transform: scale(1,1);}
+    50%{transform: scale(0,0);}
+    100%{transform: scale(1,1);}
+  
+}
+
+
+.playlistDivPlayerOnStatic {
+
+    margin: 0 auto;
+    z-index: 901;
+    height: 250px;
+    width: 240px;
+    opacity: 0.25;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+   
+}
+
+
+ .playlistDivPlayerOnStatic:hover {
+
+    opacity: 1;
+
+}
+
+.playlistDiv:hover .editIcon-container{
+
+    display: block;
+
+}
+
+
+.playlistDiv:hover .play-icon{
+
+    display: block;
+
+}
+
+.playlistDiv:hover .edit-icon{
+
+    display: block;
+
+}
+
+
+.playlistDivChangePlaylist{
+
+    margin: 0 auto;
+    z-index: 901;
+    height: 200px;
+    width: 200px;
+    opacity: 0.25;
+    /*margin-top: 20px;*/
+    margin-bottom: 20px;
+    animation-name: change;
+    animation-duration: 1.5s;
+
+}
+
+@keyframes change{
+
+    0%{transform: scale(0,0);}
+    100%{transform: scale(1,1);}
+
+}
+
+
+.playlist-image {
+
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    border: 8px solid white;
+
+}
+
+
+.playlistChange-image {
+    
+        height: 200px;
+        width: 200px;
+        border-radius: 100%;
+        border: 8px solid white;
+    
+    }
+
+.curved {
+
+    width: 200px;
+    height: 55px;
+    font-size: 40px;
+    text-align: center;
+    font-family: "SF Display";
+}
+
+.playlistDiv:hover .curved {
+
+    opacity: 1;
+    position: relative;
+    bottom: 11px;
+    right: 11px;
+
+}
+
+
+.playlistDivPlayerOnStatic:hover .curved {
+    
+    opacity: 1;
+    position: relative;
+    bottom: 11px;
+    right: 11px;
+    
+}
+
+
+.playlistDiv:hover .playlist-image{
+
+    -webkit-box-shadow: 30px 30px 60px #555555;
+    -moz-box-shadow: 30px 30px 60px #555555;
+    box-shadow: 30px 30px 60px #555555;
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+
+}
+
+.playlistDivPlayerOnStatic:hover .playlist-image {
+    -webkit-box-shadow: 30px 30px 60px #555555;
+    -moz-box-shadow: 30px 30px 60px #555555;
+    box-shadow: 30px 30px 60px #555555;
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+
+}
+
+.playlistDivPlayerOnStatic:hover .editIcon-container{
+
+    display: block;
+
+}
+
+.playlistDivPlayerOnStatic:hover .play-icon{
+
+    display: block;
+
+}
+
+.playlistDivPlayerOnStatic:hover .edit-icon{
+
+    display: block;
+
+}
+
+
+.playlistChange{
+
+    animation-name: playlistGo;
+    animation-duration: 2s;
+
+}
+
+
+@keyframes playlistGo{
+
+    0%{transform: scale(1,1);}
+    15%{transform: scale(1.3,1.3);}
+    50%{transform: scale(0,0)}
+    100%{transform: scale(1,1);}
+
+}
+
+
+.playIcon-container{
+
+  position: relative;
+  justify-content: center;
+  bottom: 152px;
+  left: 57px;
+  height: 20px;
+  width: 20px;
+  text-shadow: 15px 15px 20px #222222;
+
+}
+
+
+.editIcon-container{
+    
+    display: none;
+    border: 1px solid #ff5022;
+    border-radius: 100%;
+    position: relative;
+    bottom: 195px;
+    left: 200px;
+    height: 37px;
+    width: 37px;
+    margin: 20px 0px;
+    text-shadow: 15px 15px 20px #222222;
+    animation-name: editIcon-border-colorchange;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+}
+
+.editIcon-container:hover{
+
+background-color: black;
+
+}
+
+@keyframes editIcon-border-colorchange{
+
+    
+    0%{border: 1px solid darkseagreen;}
+    50%{border: 1px solid #ff5022;}
+    100%{border: 1px solid darkseagreen;}
+}
+
+
+.playIcon-container-onPlayer{
+    
+    position: relative;
+    bottom: 138px;
+    left: 66px;
+    height: 20px;
+    width: 20px;
+    text-shadow: 15px 15px 20px #222222;
+    
+}
+
+
+.play-icon{
+
+  display: none;
+  height: 20px;
+  width: 20px;
+  color: white;
+  animation-name: playColorChange;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+}
+
+
+.edit-icon{
+
+  position: relative;
+  left: 5px;
+  top: 1px;
+  display: none;
+  height: 20px;
+  width: 20px;
+  color: #ff5022;
+  animation-name: editColorChange;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+}
+
+
+.play-icon-onPlayer{
+
+ z-index: 999;
+  display: none;
+  height: 20px;
+  width: 20px;
+  color: #ff5022;
+  animation-name: playColorChange;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+}
+
+@keyframes playColorChange{
+
+    0%{color: white;}
+    50%{color: #ff5022;}
+    100%{color: white;}
+}
+
+@keyframes editColorChange{
+    
+    0%{color: darkseagreen;}
+    50%{color: #ff5022;}
+    100%{color: darkseagreen;}
+}
+
+
+.nowPlaying:hover .play-icon-onPlayer{
+
+    display: block;
+    
+}
+
+
+.playerContainer {
+
+   position: relative;
+   bottom: 250px;
+
+}
+
+
+.player {
+
+    z-index: 500;
+    position: fixed;
+    top: 100px;
+    border-radius: 100px;
+    height: 210px;
+    width: 500px;
+    background-color: #ff7b55;
+    animation-name: playerIn;
+    animation-duration: 1.5s;
+    border: 4px solid darkseagreen;
+
+}
+
+@keyframes playerIn{
+
+    from{width: 10px;}
+    to{width: 500px;}
+
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+
+}
+
+
+.nowPlaying{
+
+    z-index: 999;
+    height: 200px;
+    width: 200px;
+    animation-name: appear;
+    animation-duration: 1.5s;
+
+}
+
+@keyframes appear{
+
+    0%{transform: scale(0,0);}
+    50%{transform: scale(0,0);}
+    100%{transform: scale(1,1);}
+
+}
+
+
+.playlistImagePlayer {
+
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    border: 8px solid white;
+
+}
+
+
+.spin{
+
+    animation-name: spinRecord;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+@keyframes spinRecord{
+
+    from{transform: rotate(360deg);}
+
+}
+
+.nowPlayingGo{
+
+    animation-name: go;
+    animation-duration: 2s;
+
+}
+
+@keyframes go{
+
+    0%{transform: scale(1,1);}
+    15%{transform: scale(1.3,1.3);}
+    50%{transform: scale(0,0)}
+    100%{transform: scale(1,1);}
+    0%{left: 0px;}
+    25%{left: 0px;}
+    50%{left: 30px;}
+    100%{left: 0px;}
+    25%{opacity: 1;}
+    50%{opacity: 0.3;}
+    100%{opacity: 1;}
+
+
+
+}
+
+#controlsAndSongsCol{
+
+    position: relative;
+    right: 80px;
+
+
+}
+
+
+audio {
+
+    position: relative;
+    width: 210px;
+    color: #ff7b55;
+    left: 70px;
+    top: 10px;
+    animation-name: audioAppear;
+    animation-duration: 2s;
+
+}
+
+@keyframes audioAppear{
+
+    0%{opacity: 0;}
+    0%{width: 5px;}
+
+    50%{opacity: 0;}
+    50%{width: 5px;}
+
+    100%{opacity: 1;}
+    100%{width: 200px;}
+
+}
+
+
+#playlistSongsContainer{
+
+    height: 140px;
+    width: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+.songName{
+
+    position: relative;
+    left: 80px;
+    top: 10px;
+    font-size: 15px;
+    animation-name: songAppear;
+    animation-duration:2s;
+
+}
+
+.songName:hover{
+
+    background-color: black;
+    color: white;
+
+}
+
+@keyframes songAppear {
+
+    0%{opacity: 0;}
+    90%{opacity: 0;}
+    100%{opacity: 1;}
+
+ }
+
+audio::-webkit-media-controls-panel {
+
+    background-color: #ff7b55;
+
+}
+
+.nowPlayingSongname{
+
+    display: block;
+    animation-name: changingColors;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes changingColors{
+
+    0%{color: #0aff00;}
+    20%{color: #ff04ad;}
+    40%{color: #09fff7;}
+    60%{color: white;}
+    80%{color: #fffa00;}
+    100%{color: #0aff00;}
+
+}
+
+#song{
+
+    position: relative;
+    float: left;
+
+}
+
+.noPlaySpan{
+
+    display: none;
+
+}
+
+.yesPlaySpan{
+
+    display: block;
+
+}
+
+.songName:hover .noPlaySpan{
+
+    display: block;
+    color: black;
+    background-color: white;
+
+}
+
+.edit-Icon-container-container-onPlayer1{
+
+    display: none;
+    position: relative;
+    margin: 20px 0;
+    bottom: 174px;
+    left: 503px;
+
+}
+
+.edit-Icon-container-container-onPlayer2{
+
+    display: none;
+    position: relative;
+    margin: 20px 0;
+    bottom: 174px;
+    left: 503px;
+
+}
+
+
+.edit-Icon-container-onPlayer{
+
+    height: 45px;
+    width: 45px;
+    display: none;
+    border: 1px solid #ff5022;
+    border-radius: 100%;
+    animation-name: editIcon-border-colorchange;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+
+.playerContainer:hover .edit-Icon-container-container-onPlayer1{
+
+    display: block;
+    animation-name: iconIn;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in;
+    
+}
+
+.playerContainer:hover .edit-Icon-container-container-onPlayer2{
+
+    display: block;
+    animation-name: iconIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    
+}
+
+.playerContainer:hover .edit-Icon-container-onPlayer{
+
+    display:block;
+
+}
+
+.playerContainer:hover .edit-icon-onPlayer{
+
+    display:block;
+    
+
+}
+
+@keyframes iconIn{
+
+    0%{left: 900px;}
+    1000%{left: 500px;}
+    0%{opacity: 0;}
+    1000%{opacity: 1;}
+
+}
+
+.edit-Icon-container-onPlayer:hover{
+
+    background-color: black;
+
+}
+
+
+.edit-icon-onPlayer{
+
+    position: relative;
+    left: 9px;
+    top: 4px;
+    display: none;
+    height: 20px;
+    width: 20px;
+    /*color:#ff5022;*/
+    color: #ff5022;
+    animation-name: editColorChange;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+
+}
+
+
+.modalBack{
+
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
+    z-index: 998;
+
+}
+
+
+@keyframes in{
+
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+
+}
+
+
+.mybtn{
+
+    font-size :20px;
+    background-color: #ff7b55; 
+    border: none;
+
+}
+
+.mybtn:hover{
+
+    background-color: #ff9c77;
+
+}
+
+
+.invalidInput{
+
+    border-color: red;
+
+}
+
+
+.mymodal{
+
+    position: fixed;
+    background-color: #eaf2ef;
+    z-index:999;
+    top: 15%;
+    border: 10px solid darkseagreen;
+    font-size: 20px;
+    padding: 10px 35px;
+
+    animation-name: in;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+
+}
+
+
+#songInputsCont{
+
+    max-height: 200px;
+    overflow-y: auto;
+
+}
+
+
+#noResultsSpan{
+
+    position:relative;
+    bottom: 50px;
+
+}
+
+
+@media (max-width: 767px) { 
+
+.player{
+
+    width: 210px;
+    top: 55px;
+    left: 40px;
+    border: 7px solid darkseagreen;
+    animation-name: appear;
+    animation-duration: 1.5s;
+
+}
+
+#controlsAndSongsCol{
+    
+    position: relative;
+    left: 140px;
+    bottom: 110px;
+    background-color: #ff7b55;
+    border: 7px solid darkseagreen;
+    width: 240px;
+    height: 240px;
+    min-width: 240px;
+    max-width: 240px;
+    border-radius: 100%;
+    animation-name: appear;
+    animation-duration: 1.5s;
+    
+}
+
+@keyframes appear{
+
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+
+} 
+
+
+audio::-webkit-media-controls-panel {
+
+    position: relative;
+    right: 20px;
+    bottom: 47px;
+    width: 150px;
+    border-top: 7px solid darkseagreen;
+    border-right: 7px solid darkseagreen;
+    border-bottom: 5px solid darkseagreen;
+
+}
+
+
+#playlistSongsContainer{
+
+    position: relative;
+    right: 65px;
+    top: 13px;
+    width: 150px;
+    height: 140px;
+    width: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+}
+
+
+.yesPlaySpan{
+
+    display: block;
+    max-width: 15px;
+
+}
+
+.songName:hover .noPlaySpan{
+
+    display: block;
+    color: black;
+    background-color: white;
+    max-width: 15px;
+
+}
+
+
+.noPlaySpan{
+
+    display: none;
+    max-width: 15px;
+
+}
+
+#noResultsSpan{
+
+    position: relative;
+    left: 120px;
+    font-size: 50px;
+
+}
+
+
+.edit-Icon-container-container-onPlayer1{
+
+    position: relative;
+    bottom: 320px;
+    left: 385px;
+
+}
+
+.edit-Icon-container-container-onPlayer2{
+
+    position: relative;
+    bottom: 320px;
+    left: 385px;
+
+}
+
+}
+
+
