@@ -1,81 +1,104 @@
 @font-face {
-
     font-family: "SF Display";
     src: url(../fonts/sf-san-francisco-ui-display-thin-59f33a183fb29.otf);
-
 }
 
-body{
-
-  font-family: "SF Display";
-  background-color: #eaf2ef;    /*#212110*/
-
+body {
+    font-family: "SF Display";
+    background-color: #eaf2ef;
+    /*#212110*/
 }
 
 .topTaskBar {
-
     height: 40px;
     width: 100%;
     background-color: #ff7b55;
     position: fixed;
     z-index: 997;
-    animation-name: taskbarRoll;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-
+    -webkit-animation-name: taskbarRoll;
+            animation-name: taskbarRoll;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
 }
 
-@keyframes taskbarRoll{
-
-    0%{height: 100%;}
-    70%{height: 100%;}
-    100%{height: 40px;}                    
-
+@-webkit-keyframes taskbarRoll {
+    0% {
+        height: 100%;
+    }
+    70% {
+        height: 100%;
+    }
+    100% {
+        height: 40px;
+    }
 }
 
-
-.addPlay{
-
-  background-color: darkseagreen;
-  color: white;
-  height: 100%;
-  padding-top: 8px;
-  
+@keyframes taskbarRoll {
+    0% {
+        height: 100%;
+    }
+    70% {
+        height: 100%;
+    }
+    100% {
+        height: 40px;
+    }
 }
 
+.addPlay {
+    background-color: darkseagreen;
+    color: white;
+    height: 100%;
+    padding-top: 8px;
+}
 
-.addPlay:hover{
-
+.addPlay:hover {
     background-color: white;
     color: black;
     cursor: pointer;
-
 }
 
-
-.addPlaylistSpan{
-    animation-name: fadeStart;
-    animation-duration: 4s;
+.addPlaylistSpan {
+    -webkit-animation-name: fadeStart;
+            animation-name: fadeStart;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
 }
 
-
-@keyframes fadeStart{
-
-    0%{opacity: 0;}
-    60%{opacity: 0;}
-    1000%{opacity: 1;}
-
+@-webkit-keyframes fadeStart {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    1000% {
+        opacity: 1;
+    }
 }
 
-
-#searchDiv{
-    animation-name: fadeStart;
-    animation-duration: 4s;
+@keyframes fadeStart {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    1000% {
+        opacity: 1;
+    }
 }
 
+#searchDiv {
+    -webkit-animation-name: fadeStart;
+            animation-name: fadeStart;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+}
 
 .hellodiv {
-
     z-index: 999;
     position: absolute;
     color: #eaf2ef;
@@ -85,104 +108,104 @@ body{
     /*font-family: 'Bungee Shade', cursive;*/
     top: 40%;
     left: 40%;
-    animation-name: hello;
-    animation-duration: 10s;
+    -webkit-animation-name: hello;
+            animation-name: hello;
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
 }
 
-
-.playListsContainerPlayerOn{
-
+.playListsContainerPlayerOn {
     position: relative;
     top: 300px;
-
 }
 
-
-.playlistDiv{
-
+.playlistDiv {
     z-index: 900;
     width: 230px;
     height: 250px;
     margin: 0 auto;
     opacity: 0.25;
     margin-top: 20px;
-    -webkit-transition: opacity 1s;
     transition: opacity 1s;
-    animation-name: appear;
-    animation-duration: 2s;
+    -webkit-animation-name: appear;
+            animation-name: appear;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
 }
-
 
 .playlistDiv:hover {
-
     opacity: 1;
-
 }
 
-
 .playlistDivPlayerOn {
-
     z-index: 900;
     width: 240px;
     height: 250px;
     margin: 0 auto;
     opacity: 0.25;
     top: 230px;
-    animation-name: moveRecord;
-    animation-duration: 2s;
-
+    -webkit-animation-name: moveRecord;
+            animation-name: moveRecord;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
 }
 
-@keyframes moveRecord{
-
-    0%{transform: scale(1,1);}
-    50%{transform: scale(0,0);}
-    100%{transform: scale(1,1);}
-  
+@-webkit-keyframes moveRecord {
+    0% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
+    50% {
+        -webkit-transform: scale(0, 0);
+                transform: scale(0, 0);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
 }
 
+@keyframes moveRecord {
+    0% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
+    50% {
+        -webkit-transform: scale(0, 0);
+                transform: scale(0, 0);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
+}
 
 .playlistDivPlayerOnStatic {
-
     margin: 0 auto;
     z-index: 901;
     height: 250px;
     width: 240px;
     opacity: 0.25;
-    -webkit-transition: opacity 1s;
     transition: opacity 1s;
-   
 }
 
-
- .playlistDivPlayerOnStatic:hover {
-
+.playlistDivPlayerOnStatic:hover {
     opacity: 1;
-
 }
 
-.playlistDiv:hover .editIcon-container{
-
+.playlistDiv:hover .editIcon-container {
     display: block;
-
 }
 
-
-.playlistDiv:hover .play-icon{
-
+.playlistDiv:hover .play-icon {
     display: block;
-
 }
 
-.playlistDiv:hover .edit-icon{
-
+.playlistDiv:hover .edit-icon {
     display: block;
-
 }
 
-
-.playlistDivChangePlaylist{
-
+.playlistDivChangePlaylist {
     margin: 0 auto;
     z-index: 901;
     height: 200px;
@@ -190,40 +213,49 @@ body{
     opacity: 0.25;
     /*margin-top: 20px;*/
     margin-bottom: 20px;
-    animation-name: change;
-    animation-duration: 1.5s;
-
+    -webkit-animation-name: change;
+            animation-name: change;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
 }
 
-@keyframes change{
-
-    0%{transform: scale(0,0);}
-    100%{transform: scale(1,1);}
-
+@-webkit-keyframes change {
+    0% {
+        -webkit-transform: scale(0, 0);
+                transform: scale(0, 0);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
 }
 
+@keyframes change {
+    0% {
+        -webkit-transform: scale(0, 0);
+                transform: scale(0, 0);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
+}
 
 .playlist-image {
-
     height: 200px;
     width: 200px;
     border-radius: 100%;
     border: 8px solid white;
-
 }
 
-
 .playlistChange-image {
-    
-        height: 200px;
-        width: 200px;
-        border-radius: 100%;
-        border: 8px solid white;
-    
-    }
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    border: 8px solid white;
+}
 
 .curved {
-
     width: 200px;
     height: 55px;
     font-size: 40px;
@@ -232,98 +264,101 @@ body{
 }
 
 .playlistDiv:hover .curved {
-
     opacity: 1;
     position: relative;
     bottom: 11px;
     right: 11px;
-
 }
-
 
 .playlistDivPlayerOnStatic:hover .curved {
-    
     opacity: 1;
     position: relative;
     bottom: 11px;
     right: 11px;
-    
 }
 
-
-.playlistDiv:hover .playlist-image{
-
-    -webkit-box-shadow: 30px 30px 60px #555555;
-    -moz-box-shadow: 30px 30px 60px #555555;
+.playlistDiv:hover .playlist-image {
     box-shadow: 30px 30px 60px #555555;
     position: relative;
     bottom: 10px;
     right: 10px;
-
 }
 
 .playlistDivPlayerOnStatic:hover .playlist-image {
-    -webkit-box-shadow: 30px 30px 60px #555555;
-    -moz-box-shadow: 30px 30px 60px #555555;
     box-shadow: 30px 30px 60px #555555;
     position: relative;
     bottom: 10px;
     right: 10px;
-
 }
 
-.playlistDivPlayerOnStatic:hover .editIcon-container{
-
+.playlistDivPlayerOnStatic:hover .editIcon-container {
     display: block;
-
 }
 
-.playlistDivPlayerOnStatic:hover .play-icon{
-
+.playlistDivPlayerOnStatic:hover .play-icon {
     display: block;
-
 }
 
-.playlistDivPlayerOnStatic:hover .edit-icon{
-
+.playlistDivPlayerOnStatic:hover .edit-icon {
     display: block;
-
 }
 
-
-.playlistChange{
-
-    animation-name: playlistGo;
-    animation-duration: 2s;
-
+.playlistChange {
+    -webkit-animation-name: playlistGo;
+            animation-name: playlistGo;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
 }
 
-
-@keyframes playlistGo{
-
-    0%{transform: scale(1,1);}
-    15%{transform: scale(1.3,1.3);}
-    50%{transform: scale(0,0)}
-    100%{transform: scale(1,1);}
-
+@-webkit-keyframes playlistGo {
+    0% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
+    15% {
+        -webkit-transform: scale(1.3, 1.3);
+                transform: scale(1.3, 1.3);
+    }
+    50% {
+        -webkit-transform: scale(0, 0);
+                transform: scale(0, 0)
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
 }
 
-
-.playIcon-container{
-
-  position: relative;
-  justify-content: center;
-  bottom: 152px;
-  left: 57px;
-  height: 20px;
-  width: 20px;
-  text-shadow: 15px 15px 20px #222222;
-
+@keyframes playlistGo {
+    0% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
+    15% {
+        -webkit-transform: scale(1.3, 1.3);
+                transform: scale(1.3, 1.3);
+    }
+    50% {
+        -webkit-transform: scale(0, 0);
+                transform: scale(0, 0)
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
 }
 
+.playIcon-container {
+    position: relative;
+    justify-content: center;
+    bottom: 152px;
+    left: 57px;
+    height: 20px;
+    width: 20px;
+    text-shadow: 15px 15px 20px #222222;
+}
 
-.editIcon-container{
-    
+.editIcon-container {
     display: none;
     border: 1px solid #ff5022;
     border-radius: 100%;
@@ -334,114 +369,154 @@ body{
     width: 37px;
     margin: 20px 0px;
     text-shadow: 15px 15px 20px #222222;
-    animation-name: editIcon-border-colorchange;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    
+    -webkit-animation-name: editIcon-border-colorchange;
+            animation-name: editIcon-border-colorchange;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 
-.editIcon-container:hover{
-
-background-color: black;
-
+.editIcon-container:hover {
+    background-color: black;
 }
 
-@keyframes editIcon-border-colorchange{
-
-    
-    0%{border: 1px solid darkseagreen;}
-    50%{border: 1px solid #ff5022;}
-    100%{border: 1px solid darkseagreen;}
+@-webkit-keyframes editIcon-border-colorchange {
+    0% {
+        border: 1px solid darkseagreen;
+    }
+    50% {
+        border: 1px solid #ff5022;
+    }
+    100% {
+        border: 1px solid darkseagreen;
+    }
 }
 
+@keyframes editIcon-border-colorchange {
+    0% {
+        border: 1px solid darkseagreen;
+    }
+    50% {
+        border: 1px solid #ff5022;
+    }
+    100% {
+        border: 1px solid darkseagreen;
+    }
+}
 
-.playIcon-container-onPlayer{
-    
+.playIcon-container-onPlayer {
     position: relative;
     bottom: 138px;
     left: 66px;
     height: 20px;
     width: 20px;
     text-shadow: 15px 15px 20px #222222;
-    
 }
 
-
-.play-icon{
-
-  display: none;
-  height: 20px;
-  width: 20px;
-  color: white;
-  animation-name: playColorChange;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-
+.play-icon {
+    display: none;
+    height: 20px;
+    width: 20px;
+    color: white;
+    -webkit-animation-name: playColorChange;
+            animation-name: playColorChange;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 
-
-.edit-icon{
-
-  position: relative;
-  left: 5px;
-  top: 1px;
-  display: none;
-  height: 20px;
-  width: 20px;
-  color: #ff5022;
-  animation-name: editColorChange;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-
+.edit-icon {
+    position: relative;
+    left: 5px;
+    top: 1px;
+    display: none;
+    height: 20px;
+    width: 20px;
+    color: #ff5022;
+    -webkit-animation-name: editColorChange;
+            animation-name: editColorChange;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 
-
-.play-icon-onPlayer{
-
- z-index: 999;
-  display: none;
-  height: 20px;
-  width: 20px;
-  color: #ff5022;
-  animation-name: playColorChange;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-
+.play-icon-onPlayer {
+    z-index: 999;
+    display: none;
+    height: 20px;
+    width: 20px;
+    color: #ff5022;
+    -webkit-animation-name: playColorChange;
+            animation-name: playColorChange;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
 }
 
-@keyframes playColorChange{
-
-    0%{color: white;}
-    50%{color: #ff5022;}
-    100%{color: white;}
+@-webkit-keyframes playColorChange {
+    0% {
+        color: white;
+    }
+    50% {
+        color: #ff5022;
+    }
+    100% {
+        color: white;
+    }
 }
 
-@keyframes editColorChange{
-    
-    0%{color: darkseagreen;}
-    50%{color: #ff5022;}
-    100%{color: darkseagreen;}
+@keyframes playColorChange {
+    0% {
+        color: white;
+    }
+    50% {
+        color: #ff5022;
+    }
+    100% {
+        color: white;
+    }
 }
 
+@-webkit-keyframes editColorChange {
+    0% {
+        color: darkseagreen;
+    }
+    50% {
+        color: #ff5022;
+    }
+    100% {
+        color: darkseagreen;
+    }
+}
 
-.nowPlaying:hover .play-icon-onPlayer{
+@keyframes editColorChange {
+    0% {
+        color: darkseagreen;
+    }
+    50% {
+        color: #ff5022;
+    }
+    100% {
+        color: darkseagreen;
+    }
+}
 
+.nowPlaying:hover .play-icon-onPlayer {
     display: block;
-    
 }
-
 
 .playerContainer {
-
-   position: relative;
-   bottom: 250px;
-
+    position: relative;
+    bottom: 250px;
 }
 
-
 .player {
-
     z-index: 500;
     position: fixed;
     top: 100px;
@@ -449,298 +524,476 @@ background-color: black;
     height: 210px;
     width: 500px;
     background-color: #ff7b55;
-    animation-name: playerIn;
-    animation-duration: 1.5s;
+    -webkit-animation-name: playerIn;
+            animation-name: playerIn;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
     border: 4px solid darkseagreen;
-
 }
 
-@keyframes playerIn{
-
-    from{width: 10px;}
-    to{width: 500px;}
-
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-
+@-webkit-keyframes playerIn {
+    from {
+        width: 10px;
+    }
+    to {
+        width: 500px;
+    }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
+@keyframes playerIn {
+    from {
+        width: 10px;
+    }
+    to {
+        width: 500px;
+    }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
-.nowPlaying{
-
+.nowPlaying {
     z-index: 999;
     height: 200px;
     width: 200px;
-    animation-name: appear;
-    animation-duration: 1.5s;
-
+    -webkit-animation-name: appear;
+            animation-name: appear;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
 }
 
-@keyframes appear{
-
-    0%{transform: scale(0,0);}
-    50%{transform: scale(0,0);}
-    100%{transform: scale(1,1);}
-
+@-webkit-keyframes appear {
+    0% {
+        -webkit-transform: scale(0, 0);
+                transform: scale(0, 0);
+    }
+    50% {
+        -webkit-transform: scale(0, 0);
+                transform: scale(0, 0);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
 }
 
+@keyframes appear {
+    0% {
+        -webkit-transform: scale(0, 0);
+                transform: scale(0, 0);
+    }
+    50% {
+        -webkit-transform: scale(0, 0);
+                transform: scale(0, 0);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
+}
 
 .playlistImagePlayer {
-
     height: 200px;
     width: 200px;
     border-radius: 100%;
     border: 8px solid white;
-
 }
 
-
-.spin{
-
-    animation-name: spinRecord;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-
+.spin {
+    -webkit-animation-name: spinRecord;
+            animation-name: spinRecord;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
 }
 
-@keyframes spinRecord{
-
-    from{transform: rotate(360deg);}
-
+@-webkit-keyframes spinRecord {
+    from {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
 }
 
-.nowPlayingGo{
-
-    animation-name: go;
-    animation-duration: 2s;
-
+@keyframes spinRecord {
+    from {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
 }
 
-@keyframes go{
-
-    0%{transform: scale(1,1);}
-    15%{transform: scale(1.3,1.3);}
-    50%{transform: scale(0,0)}
-    100%{transform: scale(1,1);}
-    0%{left: 0px;}
-    25%{left: 0px;}
-    50%{left: 30px;}
-    100%{left: 0px;}
-    25%{opacity: 1;}
-    50%{opacity: 0.3;}
-    100%{opacity: 1;}
-
-
-
+.nowPlayingGo {
+    -webkit-animation-name: go;
+            animation-name: go;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
 }
 
-#controlsAndSongsCol{
+@-webkit-keyframes go {
+    0% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
+    15% {
+        -webkit-transform: scale(1.3, 1.3);
+                transform: scale(1.3, 1.3);
+    }
+    50% {
+        -webkit-transform: scale(0, 0);
+                transform: scale(0, 0)
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
+    0% {
+        left: 0px;
+    }
+    25% {
+        left: 0px;
+    }
+    50% {
+        left: 30px;
+    }
+    100% {
+        left: 0px;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
+@keyframes go {
+    0% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
+    15% {
+        -webkit-transform: scale(1.3, 1.3);
+                transform: scale(1.3, 1.3);
+    }
+    50% {
+        -webkit-transform: scale(0, 0);
+                transform: scale(0, 0)
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
+    0% {
+        left: 0px;
+    }
+    25% {
+        left: 0px;
+    }
+    50% {
+        left: 30px;
+    }
+    100% {
+        left: 0px;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#controlsAndSongsCol {
     position: relative;
     right: 80px;
-
-
 }
 
-
 audio {
-
     position: relative;
     width: 210px;
     color: #ff7b55;
     left: 70px;
     top: 10px;
-    animation-name: audioAppear;
-    animation-duration: 2s;
-
+    -webkit-animation-name: audioAppear;
+            animation-name: audioAppear;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
 }
 
-@keyframes audioAppear{
-
-    0%{opacity: 0;}
-    0%{width: 5px;}
-
-    50%{opacity: 0;}
-    50%{width: 5px;}
-
-    100%{opacity: 1;}
-    100%{width: 200px;}
-
+@-webkit-keyframes audioAppear {
+    0% {
+        opacity: 0;
+    }
+    0% {
+        width: 5px;
+    }
+    50% {
+        opacity: 0;
+    }
+    50% {
+        width: 5px;
+    }
+    100% {
+        opacity: 1;
+    }
+    100% {
+        width: 200px;
+    }
 }
 
+@keyframes audioAppear {
+    0% {
+        opacity: 0;
+    }
+    0% {
+        width: 5px;
+    }
+    50% {
+        opacity: 0;
+    }
+    50% {
+        width: 5px;
+    }
+    100% {
+        opacity: 1;
+    }
+    100% {
+        width: 200px;
+    }
+}
 
-#playlistSongsContainer{
-
+#playlistSongsContainer {
     height: 140px;
     width: 300px;
     overflow-y: auto;
     overflow-x: hidden;
-
 }
 
-.songName{
-
+.songName {
     position: relative;
     left: 80px;
     top: 10px;
     font-size: 15px;
-    animation-name: songAppear;
-    animation-duration:2s;
-
+    -webkit-animation-name: songAppear;
+            animation-name: songAppear;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
 }
 
-.songName:hover{
-
+.songName:hover {
     background-color: black;
     color: white;
+}
 
+@-webkit-keyframes songAppear {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes songAppear {
-
-    0%{opacity: 0;}
-    90%{opacity: 0;}
-    100%{opacity: 1;}
-
- }
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 audio::-webkit-media-controls-panel {
-
     background-color: #ff7b55;
-
 }
 
-.nowPlayingSongname{
-
+.nowPlayingSongname {
     display: block;
-    animation-name: changingColors;
-    animation-duration: 7s;
-    animation-iteration-count: infinite;
-
+    -webkit-animation-name: changingColors;
+            animation-name: changingColors;
+    -webkit-animation-duration: 7s;
+            animation-duration: 7s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 
-@keyframes changingColors{
-
-    0%{color: #0aff00;}
-    20%{color: #ff04ad;}
-    40%{color: #09fff7;}
-    60%{color: white;}
-    80%{color: #fffa00;}
-    100%{color: #0aff00;}
-
+@-webkit-keyframes changingColors {
+    0% {
+        color: #0aff00;
+    }
+    20% {
+        color: #ff04ad;
+    }
+    40% {
+        color: #09fff7;
+    }
+    60% {
+        color: white;
+    }
+    80% {
+        color: #fffa00;
+    }
+    100% {
+        color: #0aff00;
+    }
 }
 
-#song{
+@keyframes changingColors {
+    0% {
+        color: #0aff00;
+    }
+    20% {
+        color: #ff04ad;
+    }
+    40% {
+        color: #09fff7;
+    }
+    60% {
+        color: white;
+    }
+    80% {
+        color: #fffa00;
+    }
+    100% {
+        color: #0aff00;
+    }
+}
 
+#song {
     position: relative;
     float: left;
-
 }
 
-.noPlaySpan{
-
+.noPlaySpan {
     display: none;
-
 }
 
-.yesPlaySpan{
-
+.yesPlaySpan {
     display: block;
-
 }
 
-.songName:hover .noPlaySpan{
-
+.songName:hover .noPlaySpan {
     display: block;
     color: black;
     background-color: white;
-
 }
 
-.edit-Icon-container-container-onPlayer1{
-
+.edit-Icon-container-container-onPlayer1 {
     display: none;
     position: relative;
     margin: 20px 0;
     bottom: 174px;
     left: 503px;
-
 }
 
-.edit-Icon-container-container-onPlayer2{
-
+.edit-Icon-container-container-onPlayer2 {
     display: none;
     position: relative;
     margin: 20px 0;
     bottom: 174px;
     left: 503px;
-
 }
 
-
-.edit-Icon-container-onPlayer{
-
+.edit-Icon-container-onPlayer {
     height: 45px;
     width: 45px;
     display: none;
     border: 1px solid #ff5022;
     border-radius: 100%;
-    animation-name: editIcon-border-colorchange;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-
+    -webkit-animation-name: editIcon-border-colorchange;
+            animation-name: editIcon-border-colorchange;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 
-.playerContainer:hover .edit-Icon-container-container-onPlayer1{
-
+.playerContainer:hover .edit-Icon-container-container-onPlayer1 {
     display: block;
-    animation-name: iconIn;
-    animation-duration: 0.8s;
-    animation-timing-function: ease-in;
-    
+    -webkit-animation-name: iconIn;
+            animation-name: iconIn;
+    -webkit-animation-duration: 0.8s;
+            animation-duration: 0.8s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
 }
 
-.playerContainer:hover .edit-Icon-container-container-onPlayer2{
-
+.playerContainer:hover .edit-Icon-container-container-onPlayer2 {
     display: block;
-    animation-name: iconIn;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    
+    -webkit-animation-name: iconIn;
+            animation-name: iconIn;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
 }
 
-.playerContainer:hover .edit-Icon-container-onPlayer{
-
-    display:block;
-
+.playerContainer:hover .edit-Icon-container-onPlayer {
+    display: block;
 }
 
-.playerContainer:hover .edit-icon-onPlayer{
-
-    display:block;
-    
-
+.playerContainer:hover .edit-icon-onPlayer {
+    display: block;
 }
 
-@keyframes iconIn{
-
-    0%{left: 900px;}
-    1000%{left: 500px;}
-    0%{opacity: 0;}
-    1000%{opacity: 1;}
-
+@-webkit-keyframes iconIn {
+    0% {
+        left: 900px;
+    }
+    1000% {
+        left: 500px;
+    }
+    0% {
+        opacity: 0;
+    }
+    1000% {
+        opacity: 1;
+    }
 }
 
-.edit-Icon-container-onPlayer:hover{
+@keyframes iconIn {
+    0% {
+        left: 900px;
+    }
+    1000% {
+        left: 500px;
+    }
+    0% {
+        opacity: 0;
+    }
+    1000% {
+        opacity: 1;
+    }
+}
 
+.edit-Icon-container-onPlayer:hover {
     background-color: black;
-
 }
 
-
-.edit-icon-onPlayer{
-
+.edit-icon-onPlayer {
     position: relative;
     left: 9px;
     top: 4px;
@@ -749,203 +1002,172 @@ audio::-webkit-media-controls-panel {
     width: 20px;
     /*color:#ff5022;*/
     color: #ff5022;
-    animation-name: editColorChange;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-
-
+    -webkit-animation-name: editColorChange;
+            animation-name: editColorChange;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 
-
-.modalBack{
-
+.modalBack {
     position: fixed;
     height: 100%;
     width: 100%;
     background-color: black;
     opacity: 0.8;
     z-index: 998;
-
 }
 
-
-@keyframes in{
-
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-
+@-webkit-keyframes in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
+@keyframes in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
-.mybtn{
-
-    font-size :20px;
-    background-color: #ff7b55; 
+.mybtn {
+    font-size: 20px;
+    background-color: #ff7b55;
     border: none;
-
 }
 
-.mybtn:hover{
-
+.mybtn:hover {
     background-color: #ff9c77;
-
 }
 
-
-.invalidInput{
-
+.invalidInput {
     border-color: red;
-
 }
 
-
-.mymodal{
-
+.mymodal {
     position: fixed;
     background-color: #eaf2ef;
-    z-index:999;
+    z-index: 999;
     top: 15%;
     border: 10px solid darkseagreen;
     font-size: 20px;
     padding: 10px 35px;
-
-    animation-name: in;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-out;
-
+    -webkit-animation-name: in;
+            animation-name: in;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
 }
 
-
-#songInputsCont{
-
+#songInputsCont {
     max-height: 200px;
     overflow-y: auto;
-
 }
 
-
-#noResultsSpan{
-
-    position:relative;
+#noResultsSpan {
+    position: relative;
     bottom: 50px;
-
 }
 
-
-@media (max-width: 767px) { 
-
-.player{
-
-    width: 210px;
-    top: 55px;
-    left: 40px;
-    border: 7px solid darkseagreen;
-    animation-name: appear;
-    animation-duration: 1.5s;
-
+@media (max-width: 767px) {
+    .player {
+        width: 210px;
+        top: 55px;
+        left: 40px;
+        border: 7px solid darkseagreen;
+        -webkit-animation-name: appear;
+                animation-name: appear;
+        -webkit-animation-duration: 1.5s;
+                animation-duration: 1.5s;
+    }
+    #controlsAndSongsCol {
+        position: relative;
+        left: 140px;
+        bottom: 110px;
+        background-color: #ff7b55;
+        border: 7px solid darkseagreen;
+        width: 240px;
+        height: 240px;
+        min-width: 240px;
+        max-width: 240px;
+        border-radius: 100%;
+        -webkit-animation-name: appear;
+                animation-name: appear;
+        -webkit-animation-duration: 1.5s;
+                animation-duration: 1.5s;
+    }
+    @-webkit-keyframes appear {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes appear {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    audio::-webkit-media-controls-panel {
+        position: relative;
+        right: 20px;
+        bottom: 47px;
+        width: 150px;
+        border-top: 7px solid darkseagreen;
+        border-right: 7px solid darkseagreen;
+        border-bottom: 5px solid darkseagreen;
+    }
+    #playlistSongsContainer {
+        position: relative;
+        right: 65px;
+        top: 13px;
+        width: 150px;
+        height: 140px;
+        width: 300px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .yesPlaySpan {
+        display: block;
+        max-width: 15px;
+    }
+    .songName:hover .noPlaySpan {
+        display: block;
+        color: black;
+        background-color: white;
+        max-width: 15px;
+    }
+    .noPlaySpan {
+        display: none;
+        max-width: 15px;
+    }
+    #noResultsSpan {
+        position: relative;
+        left: 120px;
+        font-size: 50px;
+    }
+    .edit-Icon-container-container-onPlayer1 {
+        position: relative;
+        bottom: 320px;
+        left: 385px;
+    }
+    .edit-Icon-container-container-onPlayer2 {
+        position: relative;
+        bottom: 320px;
+        left: 385px;
+    }
 }
 
-#controlsAndSongsCol{
-    
-    position: relative;
-    left: 140px;
-    bottom: 110px;
-    background-color: #ff7b55;
-    border: 7px solid darkseagreen;
-    width: 240px;
-    height: 240px;
-    min-width: 240px;
-    max-width: 240px;
-    border-radius: 100%;
-    animation-name: appear;
-    animation-duration: 1.5s;
-    
-}
-
-@keyframes appear{
-
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-
-} 
-
-
-audio::-webkit-media-controls-panel {
-
-    position: relative;
-    right: 20px;
-    bottom: 47px;
-    width: 150px;
-    border-top: 7px solid darkseagreen;
-    border-right: 7px solid darkseagreen;
-    border-bottom: 5px solid darkseagreen;
-
-}
-
-
-#playlistSongsContainer{
-
-    position: relative;
-    right: 65px;
-    top: 13px;
-    width: 150px;
-    height: 140px;
-    width: 300px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    
-}
-
-
-.yesPlaySpan{
-
-    display: block;
-    max-width: 15px;
-
-}
-
-.songName:hover .noPlaySpan{
-
-    display: block;
-    color: black;
-    background-color: white;
-    max-width: 15px;
-
-}
-
-
-.noPlaySpan{
-
-    display: none;
-    max-width: 15px;
-
-}
-
-#noResultsSpan{
-
-    position: relative;
-    left: 120px;
-    font-size: 50px;
-
-}
-
-
-.edit-Icon-container-container-onPlayer1{
-
-    position: relative;
-    bottom: 320px;
-    left: 385px;
-
-}
-
-.edit-Icon-container-container-onPlayer2{
-
-    position: relative;
-    bottom: 320px;
-    left: 385px;
-
-}
-
-}
-
-
+/*# sourceMappingURL=stylesheet.css.map */
